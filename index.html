@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ec4899">
+    <title>Master Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">M</span>
+        <span>MASTER <b>PORTFOLIO</b></span>
+    </div>
+
+    <a href="#apps" class="nav-btn">Explore Apps</a>
+</header>
+
+<section class="hero">
+
+    <div class="hero-badge">
+        ✦ DIGITAL APPLICATION COLLECTION
+    </div>
+
+    <h1>
+        Discover Apps.<br>
+        <span>Experience More.</span>
+    </h1>
+
+    <p>
+        Explore premium applications created
+        to make your everyday life easier.
+    </p>
+
+    <a href="#apps" class="hero-btn">
+        Explore Collection →
+    </a>
+
+    <div class="hero-decoration"></div>
+
+</section>
+
+<section class="apps-section" id="apps">
+
+    <div class="section-heading">
+        <div>
+            <span class="small-title">OUR COLLECTION</span>
+            <h2>Explore Applications</h2>
+        </div>
+
+        <span id="appCount">0 Apps</span>
+    </div>
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search your favorite app..."
+        >
+    </div>
+
+    <div class="app-grid" id="appContainer">
+
+        <div class="loading">
+            Loading applications...
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-logo">
+        MASTER <span>PORTFOLIO</span>
+    </div>
+
+    <p>
+        Your Apps. Your Updates. One Place.
+    </p>
+
+    <small>
+        © <span id="year"></span> Master Portfolio.
+        All Rights Reserved.
+    </small>
+
+</footer>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
