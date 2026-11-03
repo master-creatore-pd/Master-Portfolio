@@ -1,1002 +1,954 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff8fc">
-<title>Master Portfolio | Official Download</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-:root {
-  --pink:#f00078;
-  --pink2:#ff55a8;
-  --ink:#171525;
-  --muted:#858293;
-  --white:#ffffff;
-  --line:#f1e5ed;
-  --bg:#fffafd;
-}
-
-* {margin:0;padding:0;box-sizing:border-box}
-
-html {scroll-behavior:smooth}
-
-body {
-  font-family:Inter,sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  overflow-x:hidden;
-}
-
-a {text-decoration:none;color:inherit}
-button {font-family:inherit}
-
-.container {
-  width:min(1150px,92%);
-  margin:auto;
-}
-
-/* NAVIGATION */
-
-.nav-wrap {
-  position:sticky;
-  top:0;
-  z-index:100;
-  padding:13px 0;
-  background:#fffafde8;
-  backdrop-filter:blur(22px);
-  border-bottom:1px solid #f7e8f0;
-}
-
-nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.brand {
-  display:flex;
-  align-items:center;
-  gap:11px;
-  font-weight:900;
-  font-size:20px;
-  letter-spacing:-1px;
-}
-
-.brand img {
-  width:43px;
-  height:43px;
-  border-radius:13px;
-  object-fit:cover;
-  background:#ffe2f0;
-}
-
-.brand span {color:var(--pink)}
-
-.nav-menu {
-  display:flex;
-  align-items:center;
-  gap:30px;
-  font-size:13px;
-  font-weight:600;
-}
-
-.nav-menu a {transition:.2s}
-.nav-menu a:hover {color:var(--pink)}
-
-.nav-download {
-  background:var(--pink);
-  color:white;
-  padding:13px 20px;
-  border-radius:50px;
-  font-size:13px;
-  font-weight:800;
-  box-shadow:0 8px 20px #f0007830;
-}
-
-/* HERO */
-
-.hero {
-  position:relative;
-  padding:95px 0 80px;
-  overflow:hidden;
-  background:
-  radial-gradient(ellipse at 80% 30%,#ffd5e9 0,transparent 35%),
-  radial-gradient(ellipse at 10% 90%,#ffe5f1 0,transparent 32%);
-}
-
-.hero:before {
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  border:1px solid #ffc4df;
-  border-radius:50%;
-  right:-170px;
-  top:0;
-  opacity:.7;
-}
-
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:50px;
-  align-items:center;
-  position:relative;
-}
-
-.eyebrow {
-  display:inline-flex;
-  gap:9px;
-  align-items:center;
-  padding:10px 15px;
-  border-radius:50px;
-  background:#fff;
-  color:var(--pink);
-  border:1px solid #ffd0e5;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
-  margin-bottom:26px;
-}
-
-.eyebrow i {font-size:13px}
-
-.hero h1 {
-  font-size:clamp(48px,7vw,82px);
-  line-height:1.02;
-  letter-spacing:-5px;
-  font-weight:900;
-}
-
-.gradient {
-  background:linear-gradient(110deg,#e50070,#ff61ae);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.hero h2 {
-  margin-top:22px;
-  font-size:24px;
-  line-height:1.45;
-  letter-spacing:-1px;
-}
-
-.hero-description {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.9;
-  margin-top:17px;
-  max-width:490px;
-}
-
-.hero-actions {
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:32px;
-}
-
-.primary-btn {
-  border:0;
-  cursor:pointer;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  background:linear-gradient(110deg,#e90070,#ff50a4);
-  color:white;
-  padding:17px 26px;
-  border-radius:17px;
-  font-size:14px;
-  font-weight:800;
-  box-shadow:0 12px 28px #e9007040;
-  transition:.3s;
-}
-
-.primary-btn:hover {
-  transform:translateY(-4px);
-  box-shadow:0 18px 32px #e9007050;
-}
-
-.outline-btn {
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  border:1px solid #efdce7;
-  padding:16px 22px;
-  border-radius:17px;
-  background:#fff;
-  font-size:13px;
-  font-weight:700;
-}
-
-/* HERO ART */
-
-.visual {
-  min-height:400px;
-  position:relative;
-  display:grid;
-  place-items:center;
-}
-
-.orbit {
-  width:320px;
-  height:320px;
-  position:absolute;
-  border-radius:50%;
-  border:1px solid #ffabd0;
-  animation:rotate 22s linear infinite;
-}
-
-.orbit:before,.orbit:after {
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  background:var(--pink);
-}
-
-.orbit:before {
-  width:13px;
-  height:13px;
-  top:32px;
-  left:48px;
-}
-
-.orbit:after {
-  width:9px;
-  height:9px;
-  bottom:35px;
-  right:40px;
-}
-
-@keyframes rotate {
-  to {transform:rotate(360deg)}
-}
-
-.app-showcase {
-  width:245px;
-  height:280px;
-  border-radius:40px;
-  background:linear-gradient(145deg,#fff,#ffe5f2);
-  border:1px solid white;
-  box-shadow:0 35px 80px #c82d7840;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  z-index:2;
-  animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  50% {transform:translateY(-13px)}
-}
-
-.app-showcase img {
-  width:115px;
-  height:115px;
-  object-fit:cover;
-  border-radius:29px;
-  box-shadow:0 15px 35px #e9007030;
-}
-
-.app-showcase h3 {
-  font-size:21px;
-  margin-top:20px;
-  font-weight:900;
-  text-align:center;
-}
-
-.app-showcase p {
-  font-size:11px;
-  color:var(--muted);
-  margin-top:7px;
-}
-
-.floating-card {
-  position:absolute;
-  z-index:3;
-  background:white;
-  padding:15px 18px;
-  border-radius:17px;
-  box-shadow:0 12px 35px #7e31531c;
-  font-size:12px;
-  font-weight:800;
-}
-
-.floating-card i {
-  color:var(--pink);
-  margin-right:7px;
-}
-
-.fc1 {top:38px;right:-5px}
-.fc2 {bottom:30px;left:-5px}
-
-/* APP DETAILS */
-
-.details-section {padding:30px 0 80px}
-
-.download-card {
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:25px;
-  align-items:center;
-  background:white;
-  padding:30px;
-  border:1px solid #f2dce8;
-  border-radius:27px;
-  box-shadow:0 20px 55px #5a20450b;
-}
-
-.app-profile {
-  display:flex;
-  align-items:center;
-  gap:19px;
-}
-
-.app-profile img {
-  width:86px;
-  height:86px;
-  border-radius:23px;
-  object-fit:cover;
-  background:#ffe4f1;
-  box-shadow:0 8px 22px #e9007020;
-}
-
-.app-profile h3 {
-  font-size:21px;
-  font-weight:900;
-}
-
-.app-profile p {
-  color:var(--muted);
-  font-size:12px;
-  margin-top:8px;
-}
-
-.app-meta {
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-  margin-top:12px;
-}
-
-.meta {
-  padding:7px 11px;
-  border-radius:8px;
-  background:#fff1f8;
-  color:#d9006c;
-  font-size:10px;
-  font-weight:800;
-}
-
-.download-area {
-  text-align:center;
-  min-width:230px;
-}
-
-.download-area .primary-btn {width:100%}
-
-.download-area p {
-  color:var(--muted);
-  font-size:10px;
-  margin-top:12px;
-}
-
-.status {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:6px;
-  margin-top:10px;
-  color:#159b69;
-  font-size:11px;
-  font-weight:700;
-}
-
-/* FEATURES */
-
-.section {padding:40px 0 85px}
-
-.section-head {
-  text-align:center;
-  margin-bottom:38px;
-}
-
-.section-head h2 {
-  font-size:35px;
-  font-weight:900;
-  letter-spacing:-1.5px;
-}
-
-.section-head p {
-  color:var(--muted);
-  font-size:13px;
-  margin-top:12px;
-}
-
-.features {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:17px;
-}
-
-.feature {
-  background:white;
-  padding:29px 19px;
-  border:1px solid #f3e5ed;
-  border-radius:23px;
-  transition:.3s;
-}
-
-.feature:hover {
-  transform:translateY(-7px);
-  border-color:#ffafd1;
-  box-shadow:0 16px 35px #e9007010;
-}
-
-.feature-icon {
-  width:53px;
-  height:53px;
-  display:grid;
-  place-items:center;
-  border-radius:16px;
-  color:var(--pink);
-  background:#fff0f7;
-  font-size:22px;
-  margin-bottom:21px;
-}
-
-.feature h3 {
-  font-size:15px;
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-.feature p {
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.8;
-}
-
-/* BOTTOM BANNER */
-
-.banner {
-  padding:48px 0;
-  background:linear-gradient(110deg,#e90070,#ff52a4);
-  color:white;
-}
-
-.banner-inner {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.banner h2 {
-  font-size:27px;
-  font-weight:900;
-}
-
-.banner p {
-  font-size:13px;
-  opacity:.9;
-  margin-top:10px;
-}
-
-.banner a {
-  padding:16px 23px;
-  border-radius:15px;
-  background:white;
-  color:#e90070;
-  font-size:13px;
-  font-weight:900;
-}
-
-/* FOOTER */
-
-footer {
-  background:#151525;
-  color:white;
-  padding:55px 0 25px;
-}
-
-.footer-grid {
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:35px;
-}
-
-footer .brand {margin-bottom:15px}
-
-footer p {
-  color:#aaa9b9;
-  font-size:12px;
-  line-height:1.9;
-}
-
-footer h4 {
-  font-size:13px;
-  margin-bottom:19px;
-}
-
-.footer-links {
-  display:grid;
-  gap:13px;
-  font-size:12px;
-  color:#bbb9ca;
-}
-
-.social {
-  display:flex;
-  gap:10px;
-}
-
-.social a {
-  width:38px;
-  height:38px;
-  border-radius:12px;
-  background:#29293d;
-  display:grid;
-  place-items:center;
-  transition:.3s;
-}
-
-.social a:hover {background:var(--pink)}
-
-.copyright {
-  border-top:1px solid #343449;
-  text-align:center;
-  margin-top:40px;
-  padding-top:22px;
-  font-size:11px;
-  color:#aaa9b9;
-}
-
-/* LOADING / ERROR */
-
-.loading {
-  opacity:.65;
-  pointer-events:none;
-}
-
-#message {
-  display:none;
-  padding:13px;
-  margin-top:15px;
-  border-radius:12px;
-  background:#fff0f5;
-  color:#c40060;
-  font-size:12px;
-  text-align:center;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:800px) {
-  .nav-menu {display:none}
-  .hero {padding:65px 0 40px}
-  .hero-grid {grid-template-columns:1fr;text-align:center}
-  .hero-description {margin:17px auto}
-  .hero-actions {justify-content:center}
-  .visual {min-height:390px}
-  .app-showcase {width:220px;height:260px}
-  .download-card {grid-template-columns:1fr;text-align:center}
-  .app-profile {flex-direction:column}
-  .app-meta {justify-content:center}
-  .download-area {width:100%}
-  .features {grid-template-columns:repeat(2,1fr)}
-  .banner-inner {flex-direction:column;text-align:center}
-  .footer-grid {grid-template-columns:1fr 1fr}
-  .footer-grid>div:first-child {grid-column:1/-1}
-}
-
-@media(max-width:430px) {
-  .brand {font-size:17px}
-  .hero h1 {letter-spacing:-3px}
-  .hero h2 {font-size:20px}
-  .features {gap:10px}
-  .feature {padding:22px 13px}
-  .footer-grid {grid-template-columns:1fr}
-  .footer-grid>div:first-child {grid-column:auto}
-  .fc1 {right:0}
-  .fc2 {left:0}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff5f9">
+  <meta name="description" content="Hishab Hobe — প্রতিদিনের হিসাব রাখুন সহজে, সুন্দরভাবে এবং নির্ভুলভাবে।">
+  <title>Hishab Hobe — Official App</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #ec4899;
+      --pink-dark: #db2777;
+      --pink-light: #fce7f3;
+      --ink: #251722;
+      --muted: #887783;
+      --white: #ffffff;
+      --bg: #fff8fb;
+      --border: #f5dce9;
+      --shadow: 0 20px 60px rgba(190, 24, 93, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Hind Siliguri", "Inter", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(249, 168, 212, .20), transparent 28%),
+        radial-gradient(circle at 95% 25%, rgba(244, 114, 182, .13), transparent 25%),
+        var(--bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    button, a {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(245, 220, 233, .8);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Inter, sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -.7px;
+    }
+
+    .brand img {
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      object-fit: cover;
+      background: white;
+      box-shadow: 0 5px 18px rgba(219, 39, 119, .16);
+    }
+
+    .brand span {
+      color: var(--pink-dark);
+    }
+
+    .nav-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+      padding: 82px 0 90px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: 9%;
+      top: 12%;
+      border-radius: 50%;
+      background: rgba(244, 114, 182, .10);
+      filter: blur(55px);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: #fff;
+      color: var(--pink-dark);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(190, 24, 93, .05);
+      margin-bottom: 23px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px #dcfce7;
+    }
+
+    h1 {
+      font-family: Inter, "Hind Siliguri", sans-serif;
+      font-size: clamp(38px, 5.2vw, 62px);
+      line-height: 1.12;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 .highlight {
+      color: var(--pink-dark);
+      display: block;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 510px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .download-btn {
+      min-height: 56px;
+      padding: 0 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      border: 0;
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, #f472b6, #db2777);
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 12px 28px rgba(219, 39, 119, .25);
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s, opacity .25s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 17px 34px rgba(219, 39, 119, .32);
+    }
+
+    .download-btn:active {
+      transform: scale(.97);
+    }
+
+    .download-btn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .details-btn {
+      min-height: 56px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .details-btn:hover {
+      border-color: #f9a8d4;
+      background: #fff5f9;
+    }
+
+    .download-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 23px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .download-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* APP VISUAL */
+    .hero-visual {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-glow {
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fbcfe8, #fce7f3);
+      filter: blur(1px);
+      opacity: .8;
+    }
+
+    .app-card {
+      width: min(285px, 78%);
+      position: relative;
+      z-index: 1;
+      padding: 27px 23px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .88);
+      border: 1px solid rgba(255, 255, 255, .95);
+      box-shadow: 0 28px 70px rgba(190, 24, 93, .17);
+      text-align: center;
+      animation: float 5s ease-in-out infinite;
+      backdrop-filter: blur(14px);
+    }
+
+    .app-card img {
+      width: 112px;
+      height: 112px;
+      object-fit: cover;
+      border-radius: 27px;
+      box-shadow: 0 13px 30px rgba(219, 39, 119, .20);
+      background: #fff;
+      margin-bottom: 19px;
+    }
+
+    .app-card h2 {
+      font-family: Inter, "Hind Siliguri", sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .app-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .floating-chip {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 15px;
+      border-radius: 15px;
+      background: white;
+      border: 1px solid #fff;
+      box-shadow: 0 12px 30px rgba(190, 24, 93, .12);
+      font-size: 13px;
+      font-weight: 700;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .chip-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--pink-light);
+      font-size: 17px;
+    }
+
+    .chip-one {
+      top: 45px;
+      right: -5px;
+    }
+
+    .chip-two {
+      bottom: 55px;
+      left: -8px;
+      animation-delay: -2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* COMMON SECTION */
+    .section {
+      padding: 65px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 37px;
+    }
+
+    .section-heading .mini-title {
+      color: var(--pink-dark);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.3;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      padding: 27px 24px;
+      background: rgba(255, 255, 255, .85);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: 0 9px 30px rgba(190, 24, 93, .045);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      background: var(--pink-light);
+      border-radius: 15px;
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .feature-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* DOWNLOAD PANEL */
+    .download-section {
+      padding: 65px 0 90px;
+    }
+
+    .download-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 30px;
+      text-align: center;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #fff, #fff0f7);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .download-panel::before,
+    .download-panel::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(244, 114, 182, .12);
+      filter: blur(20px);
+    }
+
+    .download-panel::before {
+      top: -90px;
+      left: -55px;
+    }
+
+    .download-panel::after {
+      bottom: -100px;
+      right: -45px;
+    }
+
+    .download-panel-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .download-panel h2 {
+      font-size: clamp(27px, 4vw, 37px);
+      margin-bottom: 10px;
+    }
+
+    .download-panel p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .download-panel .download-btn {
+      margin: auto;
+    }
+
+    /* APP INFO */
+    .app-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .info-pill {
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.85);
+      border-radius: 50px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .info-pill strong {
+      color: var(--ink);
+      margin-left: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--pink-dark);
+    }
+
+    .status-message {
+      min-height: 24px;
+      margin-top: 13px;
+      color: var(--pink-dark);
+      font-size: 13px;
+    }
+
+    .loading-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: var(--pink);
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      to { opacity: .25; transform: scale(.7); }
+    }
+
+    .fade-in {
+      animation: fadeIn .8s ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 58px 0 55px;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions,
+      .download-meta {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .chip-one {
+        right: 2%;
+      }
+
+      .chip-two {
+        left: 2%;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .navbar {
+        height: 68px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-label {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .download-btn,
+      .details-btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 350px;
+      }
+
+      .visual-glow {
+        width: 260px;
+        height: 260px;
+      }
+
+      .app-card {
+        width: 245px;
+        padding: 23px 18px;
+      }
+
+      .app-card img {
+        width: 95px;
+        height: 95px;
+      }
+
+      .floating-chip {
+        font-size: 11px;
+        padding: 9px 11px;
+      }
+
+      .chip-icon {
+        width: 29px;
+        height: 29px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .download-panel {
+        padding: 38px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="nav-wrap">
- <div class="container">
-  <nav>
-   <a class="brand" href="#">
-    <img id="navIcon" src="" alt="App Icon">
-    <div>Master <span>Portfolio</span></div>
-   </a>
-
-   <div class="nav-menu">
-    <a href="#">Home</a>
-    <a href="#details">Application</a>
-    <a href="#features">Features</a>
-    <a href="#contact">Contact</a>
-   </div>
-
-   <a href="#details" class="nav-download">
-    <i class="fa-solid fa-download"></i> Get App
-   </a>
-  </nav>
- </div>
-</header>
-
-<main>
-
-<section class="hero">
- <div class="container hero-grid">
-
-  <div>
-   <div class="eyebrow">
-    <i class="fa-solid fa-crown"></i>
-    OFFICIAL APPLICATION
-   </div>
-
-   <h1>
-    Master<br>
-    <span class="gradient">Portfolio.</span>
-   </h1>
-
-   <h2>Your Success,<br>Our Priority.</h2>
-
-   <p class="hero-description" id="heroDescription">
-    Discover a better mobile experience.
-    Download the latest official version of
-    Master Portfolio directly from GitHub.
-   </p>
-
-   <div class="hero-actions">
-    <a href="#details" class="primary-btn">
-     <i class="fa-solid fa-download"></i>
-     Download Application
+  <header class="container navbar">
+    <a class="brand" href="#">
+      <img id="navIcon" alt="Hishab Hobe App Icon">
+      <div>Hishab <span>Hobe</span></div>
     </a>
+    <div class="nav-label">OFFICIAL APP DOWNLOAD</div>
+  </header>
 
-    <a href="#features" class="outline-btn">
-     <i class="fa-solid fa-arrow-down"></i>
-     Explore
-    </a>
-   </div>
-  </div>
+  <main>
+    <section class="container hero">
+      <div class="hero-content fade-in">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span id="statusText">আপনার হিসাব, এখন আরও সহজ</span>
+        </div>
 
-  <div class="visual">
+        <h1>
+          হিসাব রাখুন
+          <span class="highlight">সহজ ও সুন্দরভাবে।</span>
+        </h1>
 
-   <div class="orbit"></div>
+        <p class="hero-description" id="description">
+          প্রতিদিনের কাজ ও হিসাব রাখুন এক জায়গায়। Hishab Hobe অ্যাপের মাধ্যমে আপনার হিসাব ব্যবস্থাপনাকে করুন আরও গোছানো।
+        </p>
 
-   <div class="app-showcase">
-    <img id="heroIcon" src="" alt="App Icon">
-    <h3 id="heroName">Master Portfolio</h3>
-    <p id="heroTagline">Your Success, Our Priority</p>
-   </div>
+        <div class="hero-actions">
+          <a class="download-btn" id="downloadButton" href="#" aria-label="Download Hishab Hobe APK">
+            <span>↓</span>
+            <span id="downloadLabel">Download App</span>
+          </a>
 
-   <div class="floating-card fc1">
-    <i class="fa-solid fa-shield-halved"></i>
-    Official Download
-   </div>
+          <a class="details-btn" href="#features">অ্যাপ সম্পর্কে জানুন</a>
+        </div>
 
-   <div class="floating-card fc2">
-    <i class="fa-brands fa-android"></i>
-    Android Application
-   </div>
+        <div class="download-meta">
+          <span>✓ Android App</span>
+          <span>✓ সহজ ব্যবহার</span>
+          <span>✓ দ্রুত ডাউনলোড</span>
+        </div>
+        <div class="status-message" id="statusMessage" aria-live="polite">
+          অ্যাপের তথ্য লোড হচ্ছে <span class="loading-dot"></span>
+        </div>
+      </div>
 
-  </div>
- </div>
-</section>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
 
-<section class="details-section" id="details">
- <div class="container">
+        <div class="floating-chip chip-one">
+          <span class="chip-icon">📊</span>
+          <span>হিসাব ব্যবস্থাপনা</span>
+        </div>
 
-  <div class="download-card">
+        <div class="app-card">
+          <img id="heroIcon" alt="Hishab Hobe App Icon">
+          <h2 id="appName">Hishab Hobe</h2>
+          <p id="tagline">আপনার দৈনন্দিন হিসাবের সঙ্গী</p>
+        </div>
 
-   <div class="app-profile">
-    <img id="appIcon" src="" alt="Application Icon">
+        <div class="floating-chip chip-two">
+          <span class="chip-icon">🧾</span>
+          <span>সব হিসাব এক জায়গায়</span>
+        </div>
+      </div>
+    </section>
 
-    <div>
-     <h3 id="appName">Master Portfolio</h3>
-     <p id="appDescription">Premium Android Application</p>
+    <section class="container section" id="features">
+      <div class="section-heading">
+        <div class="mini-title">WHY HISHAB HOBE</div>
+        <h2>আপনার হিসাব রাখার সহজ সমাধান</h2>
+        <p>দৈনন্দিন হিসাবকে আরও গোছানোভাবে পরিচালনা করতে প্রয়োজনীয় সুবিধাগুলো একসঙ্গে।</p>
+      </div>
 
-     <div class="app-meta">
-      <span class="meta" id="appVersion">Version 1.0.0</span>
-      <span class="meta" id="appSize">8.5 MB</span>
-      <span class="meta" id="appPlatform">Android</span>
-     </div>
+      <div class="features">
+        <article class="feature-card">
+          <div class="feature-icon">🧮</div>
+          <h3>সহজ হিসাব</h3>
+          <p>দৈনন্দিন হিসাবের তথ্য সহজে সংরক্ষণ ও পরিচালনা করুন।</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>দৈনিক ও মাসিক হিসাব</h3>
+          <p>দিনভিত্তিক এবং নির্দিষ্ট সময়ের হিসাব এক নজরে দেখুন।</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Customer Records</h3>
+          <p>কাস্টমারের প্রয়োজনীয় তথ্য সংরক্ষণ করে সহজে খুঁজে নিন।</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Delivery Records</h3>
+          <p>ডেলিভারি সংক্রান্ত হিসাব ও তথ্য আরও গোছানোভাবে রাখুন।</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Money Counter</h3>
+          <p>টাকার নোট ও কয়েনের হিসাব দ্রুত গণনা করুন।</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>পরিচ্ছন্ন ডিজাইন</h3>
+          <p>সহজবোধ্য ইন্টারফেসে প্রয়োজনীয় কাজগুলো সম্পন্ন করুন।</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container download-section" id="download">
+      <div class="download-panel">
+        <div class="download-panel-content">
+          <h2>আজই ব্যবহার শুরু করুন</h2>
+          <p>Hishab Hobe অ্যাপটি ডাউনলোড করে আপনার হিসাব রাখুন আরও সহজভাবে।</p>
+
+          <a class="download-btn" id="bottomDownloadButton" href="#">
+            <span>↓</span>
+            <span>Download Hishab Hobe</span>
+          </a>
+
+          <div class="app-info">
+            <div class="info-pill">Version<strong id="version">—</strong></div>
+            <div class="info-pill">File Size<strong id="fileSize">—</strong></div>
+            <div class="info-pill">Platform<strong id="platform">Android</strong></div>
+          </div>
+
+          <div class="status-message" id="bottomStatus" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> <strong>Hishab Hobe</strong>. All Rights Reserved.</p>
+      <p style="margin-top:6px">Made with care for easier accounting.</p>
     </div>
-   </div>
+  </footer>
 
-   <div class="download-area">
-    <button class="primary-btn" id="downloadBtn">
-     <i class="fa-solid fa-download"></i>
-     <span>Download APK</span>
-    </button>
+  <script>
+    "use strict";
 
-    <div class="status">
-     <i class="fa-solid fa-circle-check"></i>
-     Official GitHub Source
-    </div>
+    // apk.json must be in the root of the GitHub repository.
+    const CONFIG_URL =
+      "https://raw.githubusercontent.com/master-creatore-pd/Hishab-Hobe-/main/apk.json";
 
-    <p id="updateDate">Latest version</p>
-    <div id="message"></div>
-   </div>
+    const DEFAULT_ICON =
+      "https://raw.githubusercontent.com/master-creatore-pd/Hishab-Hobe-/main/hishab/file_0000000091cc82068967fa761eff4b9b.png";
 
-  </div>
- </div>
-</section>
+    const elements = {
+      navIcon: document.getElementById("navIcon"),
+      heroIcon: document.getElementById("heroIcon"),
+      appName: document.getElementById("appName"),
+      tagline: document.getElementById("tagline"),
+      description: document.getElementById("description"),
+      version: document.getElementById("version"),
+      fileSize: document.getElementById("fileSize"),
+      platform: document.getElementById("platform"),
+      statusMessage: document.getElementById("statusMessage"),
+      bottomStatus: document.getElementById("bottomStatus"),
+      downloadButton: document.getElementById("downloadButton"),
+      bottomDownloadButton: document.getElementById("bottomDownloadButton"),
+      downloadLabel: document.getElementById("downloadLabel"),
+      statusText: document.getElementById("statusText")
+    };
 
-<section class="section" id="features">
- <div class="container">
-
-  <div class="section-head">
-   <h2>Built for a <span class="gradient">Better Experience.</span></h2>
-   <p>Everything designed with simplicity and quality in mind.</p>
-  </div>
-
-  <div class="features">
-
-   <div class="feature">
-    <div class="feature-icon">
-     <i class="fa-solid fa-bolt"></i>
-    </div>
-    <h3>Fast Download</h3>
-    <p>Get the application directly from GitHub.</p>
-   </div>
-
-   <div class="feature">
-    <div class="feature-icon">
-     <i class="fa-solid fa-shield-halved"></i>
-    </div>
-    <h3>Official Source</h3>
-    <p>Download from the configured official repository.</p>
-   </div>
-
-   <div class="feature">
-    <div class="feature-icon">
-     <i class="fa-solid fa-mobile-screen"></i>
-    </div>
-    <h3>Android Ready</h3>
-    <p>Designed for a smooth mobile experience.</p>
-   </div>
-
-   <div class="feature">
-    <div class="feature-icon">
-     <i class="fa-solid fa-gift"></i>
-    </div>
-    <h3>Free Access</h3>
-    <p>Download the available application without fees.</p>
-   </div>
-
-  </div>
- </div>
-</section>
-
-<section class="banner">
- <div class="container banner-inner">
-  <div>
-   <h2>Experience Something Better.</h2>
-   <p>Your next experience is just one download away.</p>
-  </div>
-
-  <a href="#details">
-   <i class="fa-solid fa-download"></i>
-   Download Now
-  </a>
- </div>
-</section>
-
-</main>
-
-<footer id="contact">
- <div class="container">
-
-  <div class="footer-grid">
-
-   <div>
-    <a href="#" class="brand">
-     <img id="footerIcon" src="" alt="App Icon">
-     <div>Master <span>Portfolio</span></div>
-    </a>
-
-    <p>Dream. Plan. Achieve.</p>
-    <p>Official Android Application.</p>
-   </div>
-
-   <div>
-    <h4>Quick Navigation</h4>
-    <div class="footer-links">
-     <a href="#">Home</a>
-     <a href="#details">Application</a>
-     <a href="#features">Features</a>
-     <a href="#contact">Contact</a>
-    </div>
-   </div>
-
-   <div>
-    <h4>Connect With Us</h4>
-    <div class="social">
-     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-     <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-     <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-     <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-   </div>
-
-  </div>
-
-  <div class="copyright">
-   © 2026 Master Portfolio. All Rights Reserved. ♥
-  </div>
-
- </div>
-</footer>
-
-<script>
-
-// =====================================
-// MASTER PORTFOLIO CONFIGURATION
-// =====================================
-
-// Paste your apk.json RAW URL here.
-
-const CONFIG_URL =
-"https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/apk.json";
-
-let APK_DATA = null;
-
-const $ = id => document.getElementById(id);
-
-function showMessage(message) {
-  const box = $("message");
-  box.style.display = "block";
-  box.textContent = message;
-}
-
-function setIcon(url) {
-  ["navIcon","heroIcon","appIcon","footerIcon"].forEach(id => {
-    $(id).src = url;
-  });
-}
-
-async function loadApp() {
-
-  try {
-
-    const response = await fetch(
-      CONFIG_URL + "?t=" + Date.now(),
-      {cache:"no-store"}
-    );
-
-    if (!response.ok) {
-      throw new Error("Configuration file not found");
+    function setStatus(message) {
+      elements.statusMessage.textContent = message;
+      elements.bottomStatus.textContent = message;
     }
 
-    const data = await response.json();
+    function setIcon(url) {
+      const safeUrl = typeof url === "string" && /^https:\/\/\S+$/i.test(url)
+        ? url
+        : DEFAULT_ICON;
 
-    if (
-      !data.name ||
-      !data.icon ||
-      !data.apk_url ||
-      !data.apk_url.startsWith("https://")
-    ) {
-      throw new Error("Invalid APK configuration");
+      elements.navIcon.src = safeUrl;
+      elements.heroIcon.src = safeUrl;
+
+      elements.navIcon.onerror = () => {
+        elements.navIcon.src = DEFAULT_ICON;
+      };
+
+      elements.heroIcon.onerror = () => {
+        elements.heroIcon.src = DEFAULT_ICON;
+      };
     }
 
-    if (data.status !== "active") {
-      throw new Error("Application is currently unavailable");
+    function setDownloadLink(url, fileName) {
+      if (typeof url !== "string" || !/^https:\/\/\S+$/i.test(url)) {
+        throw new Error("APK download link is missing or invalid.");
+      }
+
+      [elements.downloadButton, elements.bottomDownloadButton].forEach(button => {
+        button.href = url;
+        button.target = "_blank";
+        button.rel = "noopener noreferrer";
+
+        if (fileName && typeof fileName === "string") {
+          button.setAttribute("download", fileName);
+        }
+      });
+
+      elements.downloadButton.addEventListener("click", () => {
+        elements.downloadLabel.textContent = "ডাউনলোড শুরু হচ্ছে...";
+      }, { once: true });
     }
 
-    APK_DATA = data;
+    async function loadAppConfig() {
+      try {
+        const response = await fetch(CONFIG_URL + "?t=" + Date.now(), {
+          method: "GET",
+          cache: "no-store"
+        });
 
-    // Application information
+        if (!response.ok) {
+          throw new Error("Configuration file not found. HTTP " + response.status);
+        }
 
-    document.title = data.name + " | Official Download";
+        const config = await response.json();
 
-    $("appName").textContent = data.name;
-    $("heroName").textContent = data.name;
-    $("heroTagline").textContent =
-      data.tagline || "Your Success, Our Priority";
+        if (!config || typeof config !== "object") {
+          throw new Error("Invalid configuration format.");
+        }
 
-    $("appDescription").textContent =
-      data.description || "Official Android Application";
+        const appName = config.name || "Hishab Hobe";
 
-    $("heroDescription").textContent =
-      data.description || "Download the latest Android application.";
+        elements.appName.textContent = appName;
+        document.title = appName + " — Official App";
 
-    $("appVersion").textContent =
-      "Version " + (data.version || "1.0.0");
+        elements.tagline.textContent =
+          config.tagline || "আপনার দৈনন্দিন হিসাবের সঙ্গী";
 
-    $("appSize").textContent =
-      data.file_size || "APK";
+        elements.description.textContent =
+          config.description ||
+          "প্রতিদিনের হিসাব রাখুন সহজে ও সুন্দরভাবে।";
 
-    $("appPlatform").textContent =
-      data.platform || "Android";
+        elements.version.textContent = config.version || "Latest";
+        elements.fileSize.textContent = config.file_size || "Available";
+        elements.platform.textContent = config.platform || "Android";
 
-    $("updateDate").textContent =
-      "Updated: " + (data.updated || "Latest");
+        elements.statusText.textContent =
+          config.status === "active"
+            ? "অ্যাপ ডাউনলোডের জন্য প্রস্তুত"
+            : "Hishab Hobe Official App";
 
-    // App icon
+        setIcon(config.icon || DEFAULT_ICON);
+        setDownloadLink(config.apk_url, config.file_name || "Hishab-Hobe.apk");
 
-    setIcon(data.icon);
+        elements.downloadButton.style.pointerEvents = "auto";
+        elements.bottomDownloadButton.style.pointerEvents = "auto";
+        elements.downloadButton.style.opacity = "1";
+        elements.bottomDownloadButton.style.opacity = "1";
 
-    $("downloadBtn").disabled = false;
-    $("downloadBtn").style.opacity = "1";
+        setStatus("✓ অ্যাপের তথ্য সফলভাবে লোড হয়েছে।");
 
-  } catch(error) {
+      } catch (error) {
+        console.error("Hishab Hobe config error:", error);
 
-    console.error(error);
+        setIcon(DEFAULT_ICON);
 
-    $("downloadBtn").disabled = true;
-    $("downloadBtn").style.opacity = ".5";
+        [elements.downloadButton, elements.bottomDownloadButton].forEach(button => {
+          button.removeAttribute("href");
+          button.style.pointerEvents = "none";
+          button.style.opacity = ".5";
+        });
 
-    showMessage("Unable to load application. Please try again later.");
+        elements.downloadLabel.textContent = "ডাউনলোড এখন পাওয়া যাচ্ছে না";
+        setStatus("অ্যাপের তথ্য লোড করা যায়নি। কিছুক্ষণ পর আবার চেষ্টা করুন।");
+      }
+    }
 
-  }
-}
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-// DOWNLOAD
-
-$("downloadBtn").addEventListener("click", function() {
-
-  if (!APK_DATA || !APK_DATA.apk_url) {
-    showMessage("Application is not ready.");
-    return;
-  }
-
-  if (!APK_DATA.apk_url.startsWith("https://")) {
-    showMessage("Invalid APK download link.");
-    return;
-  }
-
-  const button = this;
-
-  button.disabled = true;
-
-  button.innerHTML =
-    '<i class="fa-solid fa-spinner fa-spin"></i> Preparing...';
-
-  // Direct APK download
-
-  const link = document.createElement("a");
-
-  link.href = APK_DATA.apk_url;
-  link.download = APK_DATA.file_name || "application.apk";
-  link.rel = "noopener";
-
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-
-  setTimeout(() => {
-
-    button.disabled = false;
-
-    button.innerHTML =
-      '<i class="fa-solid fa-download"></i><span>Download APK</span>';
-
-  }, 1500);
-
-});
-
-// LOAD CONFIGURATION
-
-loadApp();
-
-</script>
-
+    loadAppConfig();
+  </script>
 </body>
 </html>
