@@ -1,17 +1,15 @@
-
 {
   "name": "Hishab Hobe",
-  "tagline": "Your Success, Our Priority",
+  "tagline": "আপনার দৈনন্দিন হিসাবের সঙ্গী",
   "version": "1.0.0",
   "version_code": 1,
-  "description": "Experience the premium Hishab Hobe Android application.",
+  "description": "Hishab Hobe — দৈনিক হিসাব, মাসিক হিসাব, কাস্টমার রেকর্ড, ডেলিভারি হিসাব এবং Money Counter পরিচালনার সহজ সমাধান।",
   "icon": "https://raw.githubusercontent.com/master-creatore-pd/Hishab-Hobe-/main/hishab/file_0000000091cc82068967fa761eff4b9b.png",
   "apk_url": "https://raw.githubusercontent.com/master-creatore-pd/Hishab-Hobe-/main/hishab/apk/base.apk",
-  "file_name": "Master-Portfolio.apk",
-  "file_size": "23.5 MB",
-  "updated": "2026-11-03",
+  "file_name": "Hishab-Hobe.apk",
+  "file_size": "APK",
   "platform": "Android",
   "minimum_android": "Android 7.0+",
-  "developer": "MAR-PD",
+  "developer": "Hishab Hobe",
   "status": "active"
 }
