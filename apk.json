@@ -1,0 +1,17 @@
+
+{
+  "name": "Master Portfolio",
+  "tagline": "Your Success, Our Priority",
+  "version": "1.0.0",
+  "version_code": 1,
+  "description": "Experience the premium Master Portfolio Android application.",
+  "icon": "https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/app-icon.png",
+  "apk_url": "https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/base.apk",
+  "file_name": "Master-Portfolio.apk",
+  "file_size": "23.5 MB",
+  "updated": "2026-11-03",
+  "platform": "Android",
+  "minimum_android": "Android 7.0+",
+  "developer": "MAR-PD",
+  "status": "active"
+}
